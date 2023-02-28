@@ -15,7 +15,7 @@
         <div class="container">
             <div class="row">
                 <div class="top-logo">
-                    <img src="../giaodien/images/logo.jpg">
+                    <img src="../Buoi2/images/logoBeo.jpg">
                 </div>
                 <div class="top-menu-items">
                     <ul>
@@ -75,27 +75,65 @@
                 </div>
             </div>
         </div>
-
     </section>
-
-    <!-----------------------------Slider----------------------------------->>
-    <section id="Slider">
-        <div class="aspect-ratio-169">
-            <img src="../images/bia1.jpg">
-            <img src="../images/bia2.png">
-            <img src="../images/bia3.jpg">
-            <img src="../images/bia4.jpg">
+    <!-- CATEGORY -->
+    <section class="cartegory">
+        <div class="container">
+            <div class="cartegory-top row">
+                <p>Trang Chủ</p> <span>&#10230;</span> <p>Nữ</p> <span>&#10230;</span> <p>Hàng Nữ Mới Về</p>
+            </div>
         </div>
-        <div class="dot-container">
-            <div class="dot active"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
-            <div class="dot"></div>
+        <div class="container">
+            <div class="row">
+                <div class="cartegory-left">
+                    <ul>
+                        <li class="cartegory-left-li"><a href="#">NỮ</a>
+                            <ul>
+                                <li><a href=""></a>Hàng Nữ Mới Về</li>
+                                <li><a href=""></a>Beyond Trendy</li>
+                                <li><a href=""></a>Jeans for Joy</li>
+                                <li><a href=""></a>Quần Jeans Nữ</li>
+                            </ul>
+                        </li>
+                        <li class="cartegory-left-li"><a href="">NAM</a>
+                            <ul>
+                                <li><a href=""></a>Hàng Nam Mới Về</li>
+                                <li><a href=""></a>Beyond Trendy</li>
+                                <li><a href=""></a>Jeans for Joy</li>
+                                <li><a href=""></a>Quần Jeans Nữ</li>
+                            </ul>
+                        </li>
+                        <li class="cartegory-left-li"><a href="">TRẺ EM</a></li>
+                        <li class="cartegory-left-li"><a href="">BỘ SƯU TẬP</a></li>
+                        <li class="cartegory-left-li"><a href="">ĐỒ BẢO HỘ</a></li>
+                    </ul>
+                </div>
+                <div class="cartegory-right row">
+                    <div class="cartegory-right-top-item">
+                        <p>HÀNG NỮ MỚI VỀ</p>
+                    </div>
+                    <div class="cartegory-right-top-item">
+                        <button><span>Bộ Lọc</span><i class="fa-solid fa-sort-down"></i></button>
+                    </div>
+                    <div class="cartegory-right-top-item">
+                        <select name="" id="">
+                            <option value="">Sắp xếp</option>
+                            <option value="">Giá cao đến thấp</option>
+                            <option value="">Giá thấp đến cao</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="cartegory-right-content">
+                    <div class="cartegory-right-content-item">
+                        <img src="../giaodien/images/sp1.jpg" alt="">
+                        <h1>Áo Beo Trắng Đỏ</h1>
+                        <p>50.000 <sup>đ</sup></p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-
-    <!-----------------------------Footer----------------------------------->
-
+    <!-- FOOTER -->
     <section class="footer">
         <div class="footer-container">
             <p>Tải ứng dụng Beo Shop</p>
@@ -129,55 +167,5 @@
             </div>
         </div>
     </section>
-
-
-
-
-
-
-
-</body> 
-<script>
-    const header = document.querySelector("header")
-    window.addEventListener("scroll", function () {
-        x = window.pageYOffset
-        if (x > 0) {
-            header.classList.add("sticky")
-        }
-        else {
-            header.classList.remove("sticky")
-        }
-    })
-
-
-
-    const imgPosition = document.querySelectorAll(".aspect-ratio-169 img")
-    const imgContainer = document.querySelector('.aspect-ratio-169')
-    const dotItem = document.querySelectorAll(".dot")
-    let imgNuber = imgPosition.length
-    let index = 0
-    imgPosition.forEach(function (image, index){
-        image.style.left = index * 100 + "%"
-        dotItem[index].addEventListener("click", function () {
-        slider(index)
-        })
-    }) 
-    function imgSlide() {
-        index++;
-        console.log(index)
-        if (index >= imgNuber) {index = 0}
-        slider(index)
-    }
-    function slider(index) {
-    imgContainer.style.left = "-" + index * 100 + "%"
-    const dotActive = document.querySelector('.active')
-    dotActive.classList.remove("active")
-    dotItem[index].classList.add("active")
-
-    }
-    setInterval(imgSlide, 5000)
-</script>
-
+</body>
 </html>
-
-
