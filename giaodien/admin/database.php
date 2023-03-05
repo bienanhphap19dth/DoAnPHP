@@ -1,5 +1,10 @@
 <?php
-class Database //COI LAJI CHO CLASS CO VIET HOA KHOONG
+include "config.php";
+?>
+
+
+<?php
+Class Database //COI LAI CHO CLASS CO VIET HOA KHOONG
 {
     public $host = DB_HOST;
     public $user = DB_USER;
