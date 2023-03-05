@@ -15,63 +15,61 @@ Class Database //COI LAI CHO CLASS CO VIET HOA KHOONG
     public $link;
     public $error;
 
-    public function __construct()
-    {
+    public function __construct() {
         $this -> connectDB();
     }
-    private function connectDB()
-    {
+    private function connectDB() {
         $this -> link = new mysqli($this -> host, $this -> user, $this -> pass, $this->dbname);
-        if(!$this->link){
+        if($this->link) {
             $this->error = "Connection fail".$this->link->connect_error;
             return false;
         } 
     }
-//SELECT OR READ DATABASE
-public function select($query)
-{
-    $result = $this->link->query($query) or 
-    die($this->link->error.__LINE__);
-    if($result->num_rows > 0)
+    //SELECT OR READ DATABASE
+    public function select($query)
     {
-        return $result;
+        $result = $this->link->query($query) or 
+         die($this->link->error.__LINE__);
+        if($result->num_rows > 0)
+        {
+            return $result;
+        }
+        else{
+            return false;
+        }
     }
-    else{
-        return false;
+    //INSERT DATA
+    public function insert($query){
+        $insert_row = $this->link->query($query) or
+         die($this->link->error.__LINE__);
+        if($insert_row){
+            return $insert_row;
+        }
+        else{
+            return false;
+        }
     }
-}
-//INSER DATA
-public function insert($query){
-    $insert_row = $this->link->query($query) or
-    die($this->link->error.__LINE__);
-    if($insert_row){
-        return $insert_row;
+    //UPDATE DATA
+    public function update($query){
+        $update_row = $this->link->query($query) or
+         die($this->link->error.__LINE__);
+        if($update_row){
+            return $update_row;
+        }
+        else{
+            return false;
+        }
     }
-    else{
-        return false;
+    //DELETE DATA 
+    public function delete($query){
+        $delete_row = $this->link->query($query) or
+         die($this->link->error.__LINE__);
+        if($delete_row){
+            return $delete_row;
+        }
+        else{
+            return false;
+        }
     }
-}
-//UPDATE DATA
-public function update($query){
-    $update_row = $this->link->query($query) or
-    die($this->link->error.__LINE__);
-    if($update_row){
-        return $update_row;
-    }
-    else{
-        return false;
-    }
-}
-//DELETE DATA 
-public function delete($query){
-    $delete_row = $this->link->query($query) or
-    die($this->link->error.__LINE__);
-    if($delete_row){
-        return $delete_row;
-    }
-    else{
-        return false;
-    }
-}
 }
 ?>
