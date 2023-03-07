@@ -1,3 +1,4 @@
+<!-- THÊM DỮ LIỆU -->
 <?php
 include "header.php";
 include "slider.php";
@@ -12,7 +13,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 ?>
 <div class="admin-content-right">
             <div class="admin-content-right-cartegory_add">
-                <h1>Thêm danh mục</h1>
+                <h1>Thêm Danh Mục</h1>
                 <form action="" method="POST">
                     <input name ="cartegory_name" type = "text" placeholder="Nhập tên danh mục">
                         <!-- THÊM -->

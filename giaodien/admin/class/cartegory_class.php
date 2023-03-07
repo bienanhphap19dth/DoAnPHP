@@ -15,6 +15,11 @@ class cartegory {
         $result = $this -> db -> insert($query);
         return $result;
     }
+    public function show_cartegory() {
+        $query = "SELECT * FROM tbl_cartegory ORDER BY cartegory_id ASC";
+        $result = $this -> db -> select($query);
+        return $result;
+    }
 }
 
 ?>
