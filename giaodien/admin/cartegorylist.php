@@ -28,7 +28,7 @@ $show_cartegory = $cartegory -> show_cartegory();
                                 <th><?php echo $i ?></th>
                                 <th><?php echo $result ['cartegory_id'] ?></th>
                                 <th><?php echo $result ['cartegory_name'] ?></th>
-                                <th><a href="">Sửa </a>|<a href=""> Xóa</a></th>
+                                <th><a href="cartegoryedit.php?cartegory_id=<?php echo $result ['cartegory_id'] ?>">Sửa </a>|<a href="cartegorydelete.php?cartegory_id=<?php echo $result ['cartegory_id'] ?>"> Xóa</a></th>
                             </tr>
                             <?php
                         }
