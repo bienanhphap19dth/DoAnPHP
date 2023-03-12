@@ -6,8 +6,9 @@ include "class/brand_class.php";
 <?php
 $brand = new brand;
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
-    $cartegory_name = $_POST['cartegory_name'];
-    $insert_cartegory = $cartegory -> insert_cartegory($cartegory_name);
+    $cartegory_id = $_POST['cartegory_id'];
+    $brand_name = $_POST['brand_name'];
+    $insert_cartegory = $cartegory -> insert_brand($cartegory_id,$brand_name);
 }
 ?>
 <style>
@@ -20,7 +21,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
             <div class="admin-content-right-cartegory_add">
                 <h1>Thêm Loại Sản Phẩm</h1> <br>
                 <form action="" method="POST">
-                    <select name="" id="">
+                    <select name="cartegory_id" id="">
                         <option value="#">--Chọn Danh mục</option>
                         <?php
                         $show_cartegory = $brand -> show_cartegory();
@@ -28,7 +29,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
                         ?>
                         <option value="">NAM</option>   
                         <?php
-                        }}
+                        }}  
                         ?>                   
                     </select> <br>
                     <input required name ="brand_name" type = "text" placeholder="Nhập tên loại sản phẩm">
