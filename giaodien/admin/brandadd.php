@@ -8,7 +8,7 @@ $brand = new brand;
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
     $cartegory_id = $_POST['cartegory_id'];
     $brand_name = $_POST['brand_name'];
-    $insert_cartegory = $cartegory -> insert_brand($cartegory_id,$brand_name);
+    $insert_brand = $brand -> insert_brand($cartegory_id,$brand_name);
 }
 ?>
 <style>
@@ -27,7 +27,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
                         $show_cartegory = $brand -> show_cartegory();
                         if($show_cartegory){while($rusult = $show_cartegory -> fetch_assoc()){ 
                         ?>
-                        <option value="">NAM</option>   
+                        <option value="<?php echo $rusult['cartegory_id'] ?>"><?php echo $rusult['cartegory_name'] ?></option>   
                         <?php
                         }}  
                         ?>                   

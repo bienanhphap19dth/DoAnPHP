@@ -2,10 +2,10 @@
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: Mar 05, 2023 at 03:19 PM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.0.25
+-- Máy chủ: 127.0.0.1
+-- Thời gian đã tạo: Th3 12, 2023 lúc 06:10 PM
+-- Phiên bản máy phục vụ: 10.4.27-MariaDB
+-- Phiên bản PHP: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `websitephp`
+-- Cơ sở dữ liệu: `websitephp`
 --
 CREATE DATABASE IF NOT EXISTS `websitephp` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `websitephp`;
@@ -26,7 +26,19 @@ USE `websitephp`;
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_cartegory`
+-- Cấu trúc bảng cho bảng `tbl_brand`
+--
+
+CREATE TABLE `tbl_brand` (
+  `brand_id` int(11) NOT NULL,
+  `cartegory_id` int(11) NOT NULL,
+  `brand_name` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `tbl_cartegory`
 --
 
 CREATE TABLE `tbl_cartegory` (
@@ -35,32 +47,43 @@ CREATE TABLE `tbl_cartegory` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `tbl_cartegory`
+-- Đang đổ dữ liệu cho bảng `tbl_cartegory`
 --
 
 INSERT INTO `tbl_cartegory` (`cartegory_id`, `cartegory_name`) VALUES
-(1, 'NAM'),
-(2, 'NỮ');
+(1, 'NỮ'),
+(2, 'NAM'),
+(6, 'TRẺ EM'),
+(7, 'SALE UP TO 70%'),
+(8, 'BỘ SƯU TẬP'),
+(9, 'TIN TỨC'),
+(10, 'THÔNG TIN ');
 
 --
--- Indexes for dumped tables
+-- Chỉ mục cho các bảng đã đổ
 --
 
 --
--- Indexes for table `tbl_cartegory`
+-- Chỉ mục cho bảng `tbl_brand`
+--
+ALTER TABLE `tbl_brand`
+  ADD PRIMARY KEY (`brand_id`);
+
+--
+-- Chỉ mục cho bảng `tbl_cartegory`
 --
 ALTER TABLE `tbl_cartegory`
   ADD PRIMARY KEY (`cartegory_id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT cho các bảng đã đổ
 --
 
 --
--- AUTO_INCREMENT for table `tbl_cartegory`
+-- AUTO_INCREMENT cho bảng `tbl_cartegory`
 --
 ALTER TABLE `tbl_cartegory`
-  MODIFY `cartegory_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `cartegory_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
