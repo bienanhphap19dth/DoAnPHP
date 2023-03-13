@@ -1,34 +1,35 @@
-<!-- SHOW DỮ LIỆU -->
 <?php
 include "header.php";
 include "slider.php";
-include "class/cartegory_class.php";
+include "class/brand_class.php";
 ?>
 <?php
-$cartegory = new cartegory;
-$show_cartegory = $cartegory -> show_cartegory();
+$brand  = new brand ;
+$show_brand = $brand ->show_brand();
 ?>
 <div class="admin-content-right">
 <div class="admin-content-right-cartegory_list">
-                <h1>Danh Sách Danh Mục</h1>
+                <h1>Danh Sách Loại Sản Phẩm</h1>
                 <table>
                     <tr>
                         <th>STT</th>
                         <th>ID</th>
                         <th>Danh mục</th>
-                        <th>Tùy chỉnh</th>
+                        <th>Loại sản phẩm</th>
+                        <th>Tùy biến</th>
                     </tr>
                     <?php
-                    if($show_cartegory) 
+                    if($show_brand) 
                     {$i = 0; 
-                        while($result = $show_cartegory->fetch_assoc()) 
-                        {$i++
+                        while($result = $show_brand->fetch_assoc()) 
+                        {$i++;
                             ?>
                             <tr>
                                 <td><?php echo $i ?></td>
-                                <td><?php echo $result ['cartegory_id'] ?></td>
+                                <td><?php echo $result ['brand_id'] ?></td>
                                 <td><?php echo $result ['cartegory_name'] ?></td>
-                                <td><a href="cartegoryedit.php?cartegory_id=<?php echo $result ['cartegory_id'] ?>">Sửa </a>|<a href="cartegorydelete.php?cartegory_id=<?php echo $result ['cartegory_id'] ?>"> Xóa</a></td>
+                                <td><?php echo $result ['brand_name'] ?></td>
+                                <td><a href="brandedit.php?brand_id=<?php echo $result ['brand_id'] ?>">Sửa </a>|<a href="branddelete.php?brand_id=<?php echo $result ['brand_id'] ?>"> Xóa</a></td>
                             </tr>
                             <?php
                         }
