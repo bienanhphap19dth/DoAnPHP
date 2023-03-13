@@ -11,8 +11,8 @@ class brand {
         $this -> db = new Database();
     }
     public function insert_brand($cartegory_id,$brand_name) { 
-        $query = "INSERT INTO tbl_brand (cartegory_id,brand_name) VALUES ('$cartegory_id,$brand_name')";  
-        $result = $this -> db -> insert($query);
+        $query = "INSERT INTO tbl_brand (cartegory_id,brand_name) VALUES ('$cartegory_id','$brand_name')";  
+        $result = $this ->db->insert($query);
         return $result;
     }
     public function show_cartegory() {
