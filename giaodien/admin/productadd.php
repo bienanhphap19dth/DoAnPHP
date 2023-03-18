@@ -8,9 +8,9 @@ $product = new product;
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
    // var_dump($_POST,$_FILES);
 //    echo '<pre>';
-//    echo print_r($_FILES);
+//    echo print_r($_FILES['product_img_desc']['name']);
 //    echo '</pre>';
-    $insert_product = $product ->insert_product($_POST,$_FILES);
+$insert_product = $product ->insert_product($_POST,$_FILES);
 }
 ?>
 
@@ -51,11 +51,11 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
                     <label for="">Giá Khuyến Mãi<span style="color:red;">*</span></label>
                     <input name="product_price_new"required type="text">
                     <label for="">Mô Tả Sản Phẩm <span style="color:red;">*</span></label>
-                    <textarea required name="product_desc" id="" cols="30" rows="10"></textarea>
+                    <textarea required name="product_desc" id="editor1" cols="30" rows="10"></textarea>
                     <label for="">Ảnh Sản Phẩm <span style="color:red;">*</span></label>
                     <input name="product_img"required type="file">
                     <label for="">Ảnh Mô Tả <span style="color:red;">*</span></label>
-                    <input name="product_img_desc"required multiple type="file">
+                    <input name="product_img_desc[]"required multiple type="file">
                         <!-- THÊM -->
                     <button type ="submit">Thêm</button> 
                 </form>
@@ -63,4 +63,20 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         </div>
     </section>
 </body>
+
+
+
+
+
+
+
+<script>
+                // Replace the <textarea id="editor1"> with a CKEditor 4
+                // instance, using default configuration.
+              
+                CKEDITOR.replace( 'editor1', {
+	filebrowserBrowseUrl: 'ckfinder/ckfinder.html',
+	filebrowserUploadUrl: 'ckfinder/core/connector/php/connector.php?command=QuickUpload&type=Files'
+} );
+</script>
 </html>
