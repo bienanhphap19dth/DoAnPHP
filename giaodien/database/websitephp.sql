@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 15, 2023 at 08:20 PM
+-- Generation Time: Mar 19, 2023 at 05:03 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -88,7 +88,6 @@ CREATE TABLE `tbl_product` (
 --
 
 INSERT INTO `tbl_product` (`product_id`, `product_name`, `cartegory_id`, `brand_id`, `product_price`, `product_price_new`, `product_desc`, `product_img`) VALUES
-(5, 'a', 0, 0, '111', '33', 'aaa', 'z4146560328534_3319923a69bec226f52eb355e177b812.jpg'),
 (6, 'a', 0, 0, '111', '33', 'aaa', 'z4146560328534_3319923a69bec226f52eb355e177b812.jpg'),
 (7, 'a', 0, 0, '111', '33', 'aaa', 'z4146560328534_3319923a69bec226f52eb355e177b812.jpg'),
 (8, 'a', 0, 0, '111', '33', 'aaa', 'z4146560328534_3319923a69bec226f52eb355e177b812.jpg'),
@@ -102,7 +101,92 @@ INSERT INTO `tbl_product` (`product_id`, `product_name`, `cartegory_id`, `brand_
 (16, 'a', 0, 0, '111', '33', 'aaa', 'z4146560328534_3319923a69bec226f52eb355e177b812.jpg'),
 (17, 'aaa', 8, 0, '1111', '222', 'asdadas', 'z4146560328534_3319923a69bec226f52eb355e177b812.jpg'),
 (18, 'aaa', 8, 0, '1111', '222', 'asdadas', 'z4146560328534_3319923a69bec226f52eb355e177b812.jpg'),
-(19, 'ccc', 7, 0, '1212', '12', 'aaaaaaa', 'sp8.jpg');
+(19, 'ccc', 7, 0, '1212', '12', 'aaaaaaa', 'sp8.jpg'),
+(20, 'hien beo', 9, 0, '100000', '999', 'aaa', 'z4146560328531_d0add7dbd47d5da478aba900032a19a8.jpg'),
+(21, 'nam beo', 9, 0, '100000', '999', 'aaa', 'sp8.jpg'),
+(22, 'nam beo', 9, 0, '111', '99', 'qqqqqq', 'sp8.jpg'),
+(23, 'nam beo', 9, 0, '111', '99', 'qqqqqq', 'sp8.jpg'),
+(24, 'nam beo', 9, 0, '111', '99', 'qqqqqq', 'sp8.jpg'),
+(25, 'nam beo', 9, 0, '111', '99', 'qqqqqq', 'sp8.jpg'),
+(26, 'nam beo', 9, 0, '111', '99', 'qqqqqq', 'sp8.jpg'),
+(27, 'nam beo', 9, 0, '111', '99', 'qqqqqq', 'sp8.jpg'),
+(28, 'nam beo', 9, 0, '100000', '99', 'dddddddddddd', 'sp8.jpg'),
+(29, 'nam beo', 9, 0, '100000', '99', 'dddddddddddd', 'sp8.jpg'),
+(30, 'nam beo', 9, 0, '100000', '99', 'dddddddddddd', 'sp8.jpg'),
+(31, 'nam beo', 8, 0, '100000', '222', 'qqqqqqqqqqqqq', 'sp8.jpg'),
+(32, 'nam beo', 8, 0, '100000', '222', 'qqqqqqqqqqqqq', 'sp8.jpg'),
+(33, 'phap beo', 10, 0, '200000', '222', 'aasaas', 'sp8.jpg'),
+(34, 'phap beo', 10, 0, '111', '33', 'j', 'sp8.jpg'),
+(35, 'phap beo', 10, 0, '111', '33', 'j', 'sp8.jpg'),
+(36, 'phap beo', 10, 0, '111', '33', 'j', 'sp8.jpg'),
+(37, 'phap beo', 10, 0, '111', '33', 'j', 'sp8.jpg'),
+(38, 'phap beo', 10, 0, '111', '33', 'j', 'sp8.jpg'),
+(39, 'phap beo', 10, 0, '111', '33', 'j', 'sp8.jpg'),
+(40, 'phap beo', 10, 0, '111', '33', 'j', 'sp8.jpg'),
+(41, 'phap beo', 10, 0, '111', '33', 'j', 'sp8.jpg'),
+(42, 'phap beo', 10, 0, '111', '33', 'j', 'sp8.jpg'),
+(43, 'phap beo', 10, 0, '111', '33', 'j', 'sp8.jpg'),
+(44, 'phap beo', 10, 0, '111', '33', 'j', 'sp8.jpg'),
+(45, 'phap beo', 10, 0, '111', '33', 'j', 'sp8.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_product_img_desc`
+--
+
+CREATE TABLE `tbl_product_img_desc` (
+  `product_id` int(11) NOT NULL,
+  `product_img_desc` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `tbl_product_img_desc`
+--
+
+INSERT INTO `tbl_product_img_desc` (`product_id`, `product_img_desc`) VALUES
+(32, 'sp7.jpg'),
+(32, 'sp6.jpg'),
+(32, 'sp5.jpg'),
+(33, 'sp7.jpg'),
+(33, 'sp6.jpg'),
+(33, 'sp5.jpg'),
+(34, 'sp7.jpg'),
+(34, 'sp6.jpg'),
+(34, 'sp5.jpg'),
+(35, 'sp7.jpg'),
+(35, 'sp6.jpg'),
+(35, 'sp5.jpg'),
+(36, 'sp7.jpg'),
+(36, 'sp6.jpg'),
+(36, 'sp5.jpg'),
+(37, 'sp7.jpg'),
+(37, 'sp6.jpg'),
+(37, 'sp5.jpg'),
+(38, 'sp7.jpg'),
+(38, 'sp6.jpg'),
+(38, 'sp5.jpg'),
+(39, 'sp7.jpg'),
+(39, 'sp6.jpg'),
+(39, 'sp5.jpg'),
+(40, 'sp7.jpg'),
+(40, 'sp6.jpg'),
+(40, 'sp5.jpg'),
+(41, 'sp7.jpg'),
+(41, 'sp6.jpg'),
+(41, 'sp5.jpg'),
+(42, 'sp7.jpg'),
+(42, 'sp6.jpg'),
+(42, 'sp5.jpg'),
+(43, 'sp7.jpg'),
+(43, 'sp6.jpg'),
+(43, 'sp5.jpg'),
+(44, 'sp7.jpg'),
+(44, 'sp6.jpg'),
+(44, 'sp5.jpg'),
+(45, 'sp7.jpg'),
+(45, 'sp6.jpg'),
+(45, 'sp5.jpg');
 
 --
 -- Indexes for dumped tables
@@ -140,7 +224,7 @@ ALTER TABLE `tbl_cartegory`
 -- AUTO_INCREMENT for table `tbl_product`
 --
 ALTER TABLE `tbl_product`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
