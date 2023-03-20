@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 19, 2023 at 05:03 AM
+-- Generation Time: Mar 20, 2023 at 07:24 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.1.12
 
@@ -88,9 +88,6 @@ CREATE TABLE `tbl_product` (
 --
 
 INSERT INTO `tbl_product` (`product_id`, `product_name`, `cartegory_id`, `brand_id`, `product_price`, `product_price_new`, `product_desc`, `product_img`) VALUES
-(6, 'a', 0, 0, '111', '33', 'aaa', 'z4146560328534_3319923a69bec226f52eb355e177b812.jpg'),
-(7, 'a', 0, 0, '111', '33', 'aaa', 'z4146560328534_3319923a69bec226f52eb355e177b812.jpg'),
-(8, 'a', 0, 0, '111', '33', 'aaa', 'z4146560328534_3319923a69bec226f52eb355e177b812.jpg'),
 (9, 'a', 0, 0, '111', '33', 'aaa', 'z4146560328534_3319923a69bec226f52eb355e177b812.jpg'),
 (10, 'a', 0, 0, '111', '33', 'aaa', 'z4146560328534_3319923a69bec226f52eb355e177b812.jpg'),
 (11, 'a', 0, 0, '111', '33', 'aaa', 'z4146560328534_3319923a69bec226f52eb355e177b812.jpg'),
@@ -99,23 +96,7 @@ INSERT INTO `tbl_product` (`product_id`, `product_name`, `cartegory_id`, `brand_
 (14, 'a', 0, 0, '111', '33', 'aaa', 'z4146560328534_3319923a69bec226f52eb355e177b812.jpg'),
 (15, 'a', 0, 0, '111', '33', 'aaa', 'z4146560328534_3319923a69bec226f52eb355e177b812.jpg'),
 (16, 'a', 0, 0, '111', '33', 'aaa', 'z4146560328534_3319923a69bec226f52eb355e177b812.jpg'),
-(17, 'aaa', 8, 0, '1111', '222', 'asdadas', 'z4146560328534_3319923a69bec226f52eb355e177b812.jpg'),
 (18, 'aaa', 8, 0, '1111', '222', 'asdadas', 'z4146560328534_3319923a69bec226f52eb355e177b812.jpg'),
-(19, 'ccc', 7, 0, '1212', '12', 'aaaaaaa', 'sp8.jpg'),
-(20, 'hien beo', 9, 0, '100000', '999', 'aaa', 'z4146560328531_d0add7dbd47d5da478aba900032a19a8.jpg'),
-(21, 'nam beo', 9, 0, '100000', '999', 'aaa', 'sp8.jpg'),
-(22, 'nam beo', 9, 0, '111', '99', 'qqqqqq', 'sp8.jpg'),
-(23, 'nam beo', 9, 0, '111', '99', 'qqqqqq', 'sp8.jpg'),
-(24, 'nam beo', 9, 0, '111', '99', 'qqqqqq', 'sp8.jpg'),
-(25, 'nam beo', 9, 0, '111', '99', 'qqqqqq', 'sp8.jpg'),
-(26, 'nam beo', 9, 0, '111', '99', 'qqqqqq', 'sp8.jpg'),
-(27, 'nam beo', 9, 0, '111', '99', 'qqqqqq', 'sp8.jpg'),
-(28, 'nam beo', 9, 0, '100000', '99', 'dddddddddddd', 'sp8.jpg'),
-(29, 'nam beo', 9, 0, '100000', '99', 'dddddddddddd', 'sp8.jpg'),
-(30, 'nam beo', 9, 0, '100000', '99', 'dddddddddddd', 'sp8.jpg'),
-(31, 'nam beo', 8, 0, '100000', '222', 'qqqqqqqqqqqqq', 'sp8.jpg'),
-(32, 'nam beo', 8, 0, '100000', '222', 'qqqqqqqqqqqqq', 'sp8.jpg'),
-(33, 'phap beo', 10, 0, '200000', '222', 'aasaas', 'sp8.jpg'),
 (34, 'phap beo', 10, 0, '111', '33', 'j', 'sp8.jpg'),
 (35, 'phap beo', 10, 0, '111', '33', 'j', 'sp8.jpg'),
 (36, 'phap beo', 10, 0, '111', '33', 'j', 'sp8.jpg'),
@@ -125,9 +106,7 @@ INSERT INTO `tbl_product` (`product_id`, `product_name`, `cartegory_id`, `brand_
 (40, 'phap beo', 10, 0, '111', '33', 'j', 'sp8.jpg'),
 (41, 'phap beo', 10, 0, '111', '33', 'j', 'sp8.jpg'),
 (42, 'phap beo', 10, 0, '111', '33', 'j', 'sp8.jpg'),
-(43, 'phap beo', 10, 0, '111', '33', 'j', 'sp8.jpg'),
-(44, 'phap beo', 10, 0, '111', '33', 'j', 'sp8.jpg'),
-(45, 'phap beo', 10, 0, '111', '33', 'j', 'sp8.jpg');
+(46, 'nam beo', 10, 0, '100000', '999', '<p>hhhhhhhhhhh</p>\r\n', 'TwentyFire.jpg');
 
 -- --------------------------------------------------------
 
@@ -186,7 +165,8 @@ INSERT INTO `tbl_product_img_desc` (`product_id`, `product_img_desc`) VALUES
 (44, 'sp5.jpg'),
 (45, 'sp7.jpg'),
 (45, 'sp6.jpg'),
-(45, 'sp5.jpg');
+(45, 'sp5.jpg'),
+(46, 'TwentyFire.jpg');
 
 --
 -- Indexes for dumped tables
@@ -224,7 +204,7 @@ ALTER TABLE `tbl_cartegory`
 -- AUTO_INCREMENT for table `tbl_product`
 --
 ALTER TABLE `tbl_product`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
